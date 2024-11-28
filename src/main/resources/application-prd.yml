@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: sos-bit
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
