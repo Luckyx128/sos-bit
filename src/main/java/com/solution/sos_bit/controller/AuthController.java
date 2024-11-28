@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app.lista_jogos.handler.BusinessException;
+import com.solution.sos_bit.handler.BusinessException;
 import com.solution.sos_bit.dto.AuthenticationDTO;
 import com.solution.sos_bit.service.AuthService;
 import com.solution.sos_bit.service.RefreshToken;

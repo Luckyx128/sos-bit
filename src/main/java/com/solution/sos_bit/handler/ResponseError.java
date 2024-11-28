@@ -1,4 +1,4 @@
-package com.app.lista_jogos.handler;
+package com.solution.sos_bit.handler;
 
 import java.util.Date;
 

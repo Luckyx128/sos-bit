@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import com.solution.sos_bit.dto.AcessDTO;
 import com.solution.sos_bit.dto.AuthenticationDTO;
-import com.app.lista_jogos.security.jwt.JwtUtils;
+import com.solution.sos_bit.security.jwt.JwtUtils;
 
 @Service
 public class AuthService {

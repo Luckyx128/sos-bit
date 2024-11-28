@@ -1,6 +1,6 @@
 package com.solution.sos_bit.controller;
 
-import com.app.lista_jogos.dto.UserDTO;
+import com.solution.sos_bit.dto.UserDTO;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app.lista_jogos.service.UserService;
+import com.solution.sos_bit.service.UserService;
 
 @RestController
 @RequestMapping(value = "/usuario")

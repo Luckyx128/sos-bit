@@ -1,4 +1,4 @@
-package com.app.lista_jogos.security.jwt;
+package com.solution.sos_bit.security.jwt;
 
 import java.io.IOException;
 

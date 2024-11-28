@@ -1,4 +1,4 @@
-package com.app.lista_jogos.handler;
+package com.solution.sos_bit.handler;
 
 public class BusinessException extends RuntimeException {
     /**
