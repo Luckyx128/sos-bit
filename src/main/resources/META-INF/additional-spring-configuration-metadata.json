@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "projeto.jwt-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'projeto.jwt-secret'"
+  },
+  {
+    "name": "projeto.jwtRefreshExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'projeto.jwtRefreshExpirationMs'"
+  },
+  {
+    "name": "projeto.jwtRefreshSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'projeto.jwtRefreshSecret'"
+  },
+  {
+    "name": "projeto.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'projeto.jwtExpirationMs'"
+  }
+]}

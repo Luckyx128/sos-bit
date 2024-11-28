@@ -1,0 +1,18 @@
+spring:
+  application:
+    name:  sos-bit
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bitdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+projeto:
+  jwtSecret: "bxOksa8BHgdAhR80Y3pEYvS5M+MnF2sheFDqprkTqQ4odqoszJLW1ikw64/nT/dTvlgrcBTq7HfK1B9Gai2h5A=="
+  jwtExpirationMs: 900000
+  jwtRefreshSecret: "Y2hhdmUgc2VjcmV0YSBwYXJhIHVzYXIgY29tIG8gcmVmcmVocyB0b2tlbiBwcmVjaWRvIGlzc28gcHJhIGFnb3JhIExvcmVtIElwc3VtIGlzIHNpbXBseSBkdW1teSB0ZXh0IG9mIHRoZSBwcmludGluZyBhbmQgdHlwZXNldHRpbmcgaW5kdXN0cnkuIExvcmVtIElwc3VtIGhhcyBiZWVuIHRoZSBpbmR1c3RyeSdzIHN0YW5kYXJkIGR1bW15IHRleHQgZXZlciBzaW5jZSB0aGUgMTUwMHMsIHdoZW4gYW4gdW5rbm93biBwcmludGVyIHRvb2sgYSBnYWxsZXkgb2YgdHlwZSBhbmQgc2NyYW1ibGVkIGl0IHRvIG1ha2UgYSB0eXBlIHNwZWNpbWVuIGJvb2suIEl0IGhhcwoK"
+  jwtRefreshExpirationMs: 604800000
