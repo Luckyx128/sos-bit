@@ -44,7 +44,7 @@ public class WebSecurityConfig {
 		http.csrf(csrf -> csrf.disable())	
 			.exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
 			.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-			.authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll()
+			.authorizeHttpRequests(auth -> auth.requestMatchers("/**").permitAll()
 											.requestMatchers("/usuario/cadastrar").permitAll()
 											.requestMatchers("/swagger-ui/**").permitAll()
 											.requestMatchers("/v3/**").permitAll()

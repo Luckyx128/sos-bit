@@ -96,9 +96,8 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.app</groupId>
-			<artifactId>lista-jogos-api</artifactId>
-			<version>0.5.</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
 	</dependencies>
 
