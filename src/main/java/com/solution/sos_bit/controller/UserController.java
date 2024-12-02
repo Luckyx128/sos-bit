@@ -18,9 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.solution.sos_bit.service.UserService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping(value = "/usuario")
 @CrossOrigin
+@Tag(name = "UserController", description = "Gerenciamento e manuzeio de usuarios!")
 public class UserController {
 	
 
@@ -28,29 +32,38 @@ public class UserController {
 		private UserService userService;
 		
 		@GetMapping
+		 @Operation(summary = "Buscar todos os usuarios", 
+         description = "Retora informações de todos os usuarios cadastrados no banco")
 		public List<UserDTO> listarTodos(){
 			return userService.listAll();
 		}
 		
-		@GetMapping(value = "/{id}")
-		public UserDTO buscarUsuarioPeloId(@PathVariable("id") String id) {
-			return userService.buscarPorId(id);
+		 @Operation(summary = "Buscar usuario pelo username", 
+		         description = "Retora de um unico usuario pelo username")
+		@GetMapping(value = "/{username}")
+		public UserDTO buscarUsuarioPeloId(@PathVariable String username) {
+			return userService.buscarPorId(username);
 		}
-
-		@PostMapping(value = "/cadastrar")
+		 
+		 @Operation(summary = "Cadastrar usuario", 
+		         description = "Cadastro de usuario")
+		@PostMapping()
 		public void insert(@RequestBody UserDTO usuario) {
 			userService.insert(usuario);
 		}
-		
+		 
+		 @Operation(summary = "Atualizar usuario", 
+		         description = "Principal utilidade atualizar senha de usuario")
 		@PutMapping
 		public UserDTO update(@RequestBody UserDTO usuario) {
 			return userService.update(usuario);
 		}
 		
-		//http://endereco/usuario/3
-		@DeleteMapping(value = "/{id}")
-		public ResponseEntity<Void> excluir(@PathVariable("id") String id){
-			userService.excluir(id);
+		 @Operation(summary = "Deletar usuario com o username", 
+		         description = "Deleta o usuario buscando pelo username enviado")
+		@DeleteMapping(value = "/{username}")
+		public ResponseEntity<Void> excluir(@PathVariable String username){
+			userService.excluir(username);
 			return ResponseEntity.ok().build();
 		}
 	}

@@ -14,6 +14,8 @@ import com.solution.sos_bit.dto.AuthenticationDTO;
 import com.solution.sos_bit.service.AuthService;
 import com.solution.sos_bit.service.RefreshToken;
 
+import io.swagger.v3.oas.annotations.Operation;
+
 @RestController
 @RequestMapping("/auth")
 @CrossOrigin
@@ -22,6 +24,8 @@ public class AuthController {
 	@Autowired
 	private AuthService authService;
 	
+	 @Operation(summary = "Realizar login", 
+	         description = "Loga o usuario com login e senha e retornar o token para acesso")
 	@PostMapping(value = "/login")
 	public ResponseEntity<?> login(@RequestBody AuthenticationDTO authDto){
 		if(authDto.getUsername().isBlank() || authDto.getPassword().isBlank()) {
@@ -29,7 +33,10 @@ public class AuthController {
 		}
 		return ResponseEntity.ok(authService.login(authDto));
 	}
-	
+	 
+	 
+	 @Operation(summary = "Recaregar token", 
+	         description = "Retorna um novo token de login quando expirado")
 	@PostMapping("/refresh-token")
 	public ResponseEntity<?> refreshToken(@RequestBody RefreshToken refreshToken) {
 	    if(authService.refreshToken(refreshToken.getToken()) != null)	{
